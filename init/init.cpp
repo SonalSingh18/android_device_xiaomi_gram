@@ -62,36 +62,10 @@ void load_device_properties() {
     std::string hwname = GetProperty("ro.boot.hwname", "");
     std::string region = GetProperty("ro.boot.hwc", "");
 
-    if (hwname == "curtana") {
-        if (region == "Global_TWO") {
-            set_device_props(
-                    "Redmi", "curtana", "Redmi Note 9S");
-            property_override("ro.product.mod_device", "curtana_global");
-        } else if (region == "Global_PA") {
-            set_device_props(
-                    "Redmi", "curtana", "Redmi Note 9S");
-            property_override("ro.product.mod_device", "curtana_global");
-        } else if (region == "India") {
-            set_device_props(
-                    "Redmi", "curtana", "Redmi Note 9 Pro");
-            property_override("ro.product.mod_device", "curtana_in_global");
-        } else if (region == "Japan") {
-            set_device_props(
-                    "Redmi", "curtana", "Redmi Note 9S");
-            property_override("ro.product.mod_device", "curtana_global");
-        }
-    } else if (hwname == "excalibur") {
-        set_device_props(
-                "Redmi", "excalibur", "Redmi Note 9 Pro Max");
-        property_override("ro.product.mod_device", "excalibur_in_global");
-    } else if (hwname == "gram") {
+    if (hwname == "gram") {
         set_device_props(
                 "POCO", "gram", "POCO M2 Pro");
         property_override("ro.product.mod_device", "gram_in_global");
-    } else if (hwname == "joyeuse") {
-        set_device_props(
-                "Redmi", "joyeuse", "Redmi Note 9 Pro");
-        property_override("ro.product.mod_device", "joyeuse_global");
     }
 }
 
