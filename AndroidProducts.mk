@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_gram.mk
+    $(LOCAL_DIR)/evolution_gram.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_gram-user \
-    arrow_gram-userdebug \
-    arrow_gram-eng
+    evolution_gram-user \
+    evolution_gram-userdebug \
+    evolution_gram-eng
