@@ -7,14 +7,17 @@
 # Inherit from gram device
 $(call inherit-product, device/xiaomi/gram/device.mk)
 
-# Inherit some common ArrowOS stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Evolution-X stuff
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_ENABLE_BLUR := true
+EVO_BUILD_TYPE := CUSTOM
 
 TARGET_BOOT_ANIMATION_RES := 1080
-DEVICE_MAINTAINER := SonalSingh
 
 # Device identifier
-PRODUCT_NAME := arrow_gram
+PRODUCT_NAME := evolution_gram
 PRODUCT_DEVICE := gram
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco M2 Pro
@@ -25,4 +28,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gram_in-user 12 RKQ1.211019.001 V13.0.2.0.SJPINXM release-keys"
 
-BUILD_FINGERPRINT := POCO/gram_in/gram:12/RKQ1.211019.001/V13.0.2.0.SJPINXM:user/release-keys
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.build.fingerprint="POCO/gram_in/gram:12/RKQ1.211019.001/V13.0.2.0.SJPINXM:user/release-keys"
